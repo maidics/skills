@@ -1,7 +1,6 @@
 ---
 name: tunit
-description: Write or troubleshoot tests using TUnit, TUnit.Assertions, or TUnit.Mocks, or migrate tests to TUnit. Routes to task-specific official documentation. Use only for tasks involving these packages or migration to TUnit.
-license: MIT
+description: Write or troubleshoot tests using TUnit, or TUnit.Mocks, or migrate tests to TUnit. Routes to task-specific official documentation. Use only for tasks involving these packages or migration to TUnit.
 ---
 
 # TUnit
@@ -37,7 +36,6 @@ Choose the link that matches the task; these are alternatives, not a reading che
 | Playwright browser testing | [Playwright](https://tunit.dev/docs/examples/playwright.md)                                                                                                                                                               |
 | Testcontainers and container fixtures | [ASP.NET Core integration examples](https://tunit.dev/docs/examples/aspnet.md) (see "With Testcontainers")                                                                                                                |
 | Native AOT, trimming, or reflection mode | [AOT compatibility](https://tunit.dev/docs/writing-tests/aot.md) or [engine modes](https://tunit.dev/docs/execution/engine-modes.md)                                                                                      |
-| Custom assertions | [Assertion source generators](https://tunit.dev/docs/assertions/extensibility/source-generator-assertions.md) or [custom assertion implementations](https://tunit.dev/docs/assertions/extensibility/custom-assertions.md) |
 | Custom data sources | [Data source generators](https://tunit.dev/docs/extending/data-source-generators.md)                                                                                                                                      |
 | Event receivers | [Event subscribing](https://tunit.dev/docs/writing-tests/event-subscribing.md)                                                                                                                                            |
 | TestContext and test metadata | [Test context](https://tunit.dev/docs/writing-tests/test-context.md)                                                                                                                                                      |
@@ -49,7 +47,6 @@ For other topics, such as analyzers or framework-specific integrations, use the 
 
 ## Essential distinctions
 
-- Await TUnit assertions, for example `await Assert.That(actual).IsEqualTo(expected);`.
 - Tests run in parallel by default. Account for shared mutable state and resource lifetimes.
 - TUnit uses Microsoft.Testing.Platform and `--treenode-filter`. Match command syntax to the project's SDK and runner mode; do not substitute VSTest `--filter` or assume every `dotnet test` invocation needs a `--` separator.
 - Source-generated discovery is the default; reflection mode also exists. Check the relevant documentation when changing discovery or Native AOT behavior.
